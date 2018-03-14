@@ -7,7 +7,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>OracleJDBCWebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <url>https://mvnrepository.com/artifact/com.oracle/ojdbc5</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
