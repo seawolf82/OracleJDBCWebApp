@@ -18,7 +18,7 @@
       <groupId>com.oracle</groupId>
       <artifactId>ojdbc5</artifactId>
       <version>11.2.0.3</version>
-      <scope>provided</scope>
+      <scope>system</scope>
 	  <systemPath>/opt/jboss/jboss-4.0.5.GA/server/default/lib/ojdbc5.jar</systemPath>
     </dependency>
      <dependency>
