@@ -14,12 +14,14 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<repository>
+       <id>codelds</id>
+       <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+    </repository>
      <dependency>
       <groupId>com.oracle</groupId>
       <artifactId>ojdbc5</artifactId>
       <version>11.2.0.3</version>
-      <scope>system</scope>
-	  <systemPath>/opt/jboss/jboss-4.0.5.GA/server/default/lib/ojdbc5.jar</systemPath>
     </dependency>
      <dependency>
           <groupId>javax.servlet</groupId>
