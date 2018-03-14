@@ -24,6 +24,10 @@
           <groupId>javax.servlet</groupId>
           <artifactId>javax.servlet-api</artifactId>
           <version>3.1.0</version>
+		   <configuration>  
+                  <source>1.5</source>  
+                  <target>1.5</target>  
+           </configuration>  
       </dependency>
   </dependencies>
   <build>
