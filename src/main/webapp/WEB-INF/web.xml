@@ -8,9 +8,19 @@
 		<servlet-name>Main Servlet</servlet-name>
 		<servlet-class>it.euris.sample.MainServlet</servlet-class>
 	</servlet>
+    <servlet>
+    	<servlet-name>DataSourceServlet</servlet-name>
+    	<display-name>DataSourceServlet</display-name>
+    	<description></description>
+    	<servlet-class>it.euris.sample.DataSourceServlet</servlet-class>
+    </servlet>
 
 	<servlet-mapping>
 		<servlet-name>Main Servlet</servlet-name>
 		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DataSourceServlet</servlet-name>
+		<url-pattern>/DataSourceServlet</url-pattern>
 	</servlet-mapping>
 </web-app>
