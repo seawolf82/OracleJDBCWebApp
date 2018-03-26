@@ -36,6 +36,7 @@ public class DataSourceServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter writer = response.getWriter();
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		writer.println();
 	       try {
 	    	   InitialContext ctx = new InitialContext();
 	    	   DataSource ds = (DataSource)ctx.lookup("java:OracleDS");
