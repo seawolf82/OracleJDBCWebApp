@@ -42,7 +42,7 @@ public class DataSourceServlet extends HttpServlet {
 	    	   DataSource ds = (DataSource)ctx.lookup("java:OracleDS");
 	            Connection conn = ds.getConnection(); 
 	            Statement statement = conn.createStatement();
-	            String sql = "select nome,cognome from anagrafica where ROWNUM < 3";
+	            String sql = "select nome,cognome from tab_persona";
 	            ResultSet rs = statement.executeQuery(sql);
 	             
 	            int count = 1;
