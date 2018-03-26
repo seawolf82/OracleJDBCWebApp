@@ -45,10 +45,11 @@ public class DataSourceServlet extends HttpServlet {
 	            ResultSet rs = statement.executeQuery(sql);
 	             
 	            int count = 1;
-				//writer.println();
+				writer.println();
 	            while (rs.next()) {
 					writer.println(String.format("User #%d: %-15s %s", count++,
-	                        rs.getString("nome"), rs.getString("cognome")));            
+	                        rs.getString("nome"), rs.getString("cognome")));
+							writer.println();
 	            }
 	        } catch (NamingException ex) {
 	            System.err.println(ex);
