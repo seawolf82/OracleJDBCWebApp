@@ -36,27 +36,41 @@ public class DataSourceServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter writer = response.getWriter();
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		writer.println();
+		Connection conn = null;
 	       try {
 	    	   InitialContext ctx = new InitialContext();
 	    	   DataSource ds = (DataSource)ctx.lookup("java:OracleDS");
-	            Connection conn = ds.getConnection(); 
+	            conn = ds.getConnection(); 
 	            Statement statement = conn.createStatement();
 	            String sql = "select nome,cognome from tab_persona";
 	            ResultSet rs = statement.executeQuery(sql);
 	             
 	            int count = 1;
-				writer.println();
+	            writer.println();
 	            while (rs.next()) {
 					writer.println(String.format("User #%d: %-15s %s", count++,
 	                        rs.getString("nome"), rs.getString("cognome")));
-							writer.println();
+					writer.println();
+					
+	                 
 	            }
 	        } catch (NamingException ex) {
 	            System.err.println(ex);
 	        } catch (SQLException ex) {
 	            System.err.println(ex);
 	        }
+	       finally {
+	    	   if(conn !=null)
+	    	   {
+	    		   try {
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	    	   }
+	    	   
+	       }
 	    }
 	
 
